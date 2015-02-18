@@ -1,0 +1,2 @@
+(n_nationkey<0)AND(n_nationkey>24)
+(n_regionkey<0)AND(n_regionkey>4)

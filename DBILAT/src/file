@@ -1,0 +1,10 @@
+g++ -O2 -Wno-deprecated  -g -c Record.cc
+g++ -O2 -Wno-deprecated  -g -c Comparison.cc
+g++ -O2 -Wno-deprecated  -g -c ComparisonEngine.cc
+g++ -O2 -Wno-deprecated  -g -c Schema.cc
+g++ -O2 -Wno-deprecated  -g -c File.cc
+g++ -O2 -Wno-deprecated  -g -c Record.cc
+g++ -O2 -Wno-deprecated  -g -c Comparison.cc
+g++ -O2 -Wno-deprecated  -g -c ComparisonEngine.cc
+g++ -O2 -Wno-deprecated  -g -c Schema.cc
+g++ -O2 -Wno-deprecated  -g -c File.cc

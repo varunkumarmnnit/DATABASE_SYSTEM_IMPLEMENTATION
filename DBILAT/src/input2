@@ -1,0 +1,2 @@
+(r_regionkey<0)AND(r_regionkey>4)
+(r_name='XYZ')

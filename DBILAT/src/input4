@@ -1,0 +1,2 @@
+(p_partkey<1) AND (p_partkey>1500)
+(p_size = 17)

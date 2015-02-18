@@ -1,0 +1,52 @@
+Team Members :
+Varun Kumar
+siddharth phadnis
+
+/**********************How to Execute************************************/
+Go to the main Folder and Type make
+Type cd bin and execute ./test
+choose the options u want to prefer 
+
+I am using the tpch tabel path in src/DATA/10M
+if u want to change on some other tbl file change the path in test.cc int the variable *tpch_dir  
+
+***************************************************************************************************/
+
+We made some queries on each of the table generated and folowwing are some of the explanantions for each of the table 
+
+
+
+For table 1:
+Test case1(Test for boundary condition)
+Input
+(n_nationkey<0)AND(n_nationkey>24)
+output
+Expected:0 Rows is returned 
+Actual:0 Rows is returned
+
+Test case2(Test for Normal Condition)
+input:
+(n_nationkey=23)
+Output
+Expected:1 Row is returned
+Actual:1 Row is returned
+
+For table 2(Test for boundary condition)
+Input:
+(r_regionkey<0)AND(r_regionkey>4)
+Output
+Expected:0 Rows is returned
+Actual:0 Rows is returned
+Input:(
+r_name='XYZ')
+Output
+Expected:0 Rows is returned
+Actual:0 Rows is returned
+
+
+Test for adding Record
+Input:
+Adding record into HeapFile without adding the record in corressponding *.tbl file 
+Output
+Expected:record should not be added into the HeapFile 
+Actual:record is not getting added to the HeapFile.

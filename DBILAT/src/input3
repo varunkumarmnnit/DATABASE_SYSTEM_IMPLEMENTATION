@@ -1,0 +1,2 @@
+(c_custkey<1) AND (c_custkey>1500)
+(c_mktsegment='AUTOMOBILE')

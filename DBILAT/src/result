@@ -1,0 +1,108 @@
+g++ -O2 -Wno-deprecated  -g -c Record.cc
+g++ -O2 -Wno-deprecated  -g -c Comparison.cc
+Comparison.cc: In member function ‘void CNF::GrowFromParseTree(AndList*, Schema*, Schema*, Record&)’:
+Comparison.cc:416:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  Schema mySchema("hkljdfgkSDFSDF", "tempSchema");
+                                                ^
+Comparison.cc:416:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+Comparison.cc: In member function ‘void CNF::GrowFromParseTree(AndList*, Schema*, Record&)’:
+Comparison.cc:606:49: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  Schema outSchema("hkljdfgkSDFSDF", "tempSchema");
+                                                 ^
+Comparison.cc:606:49: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+g++ -O2 -Wno-deprecated  -g -c ComparisonEngine.cc
+g++ -O2 -Wno-deprecated  -g -c Schema.cc
+Schema.cc: In constructor ‘Schema::Schema(char*, char*)’:
+Schema.cc:46:27: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+  fscanf (foo, "%s", space);
+                           ^
+Schema.cc:58:28: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+   fscanf (foo, "%s", space);
+                            ^
+Schema.cc:84:27: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+  fscanf (foo, "%s", space);
+                           ^
+Schema.cc:91:28: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+   fscanf (foo, "%s", space);
+                            ^
+Schema.cc:95:29: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+    fscanf (foo, "%s", space);
+                             ^
+Schema.cc:106:28: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+   fscanf (foo, "%s", space);
+                            ^
+Schema.cc:114:28: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+   fscanf (foo, "%s", space); 
+                            ^
+Schema.cc:118:28: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+   fscanf (foo, "%s", space);
+                            ^
+g++ -O2 -Wno-deprecated  -g -c File.cc
+File.cc: In member function ‘void File::GetPage(Page*, off_t)’:
+File.cc:186:34: warning: ignoring return value of ‘ssize_t read(int, void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+  read (myFilDes, bits, PAGE_SIZE);
+                                  ^
+File.cc: In member function ‘void File::AddPage(Page*, off_t)’:
+File.cc:206:40: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+    write (myFilDes, &foo, sizeof (int));
+                                        ^
+File.cc:223:35: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+  write (myFilDes, bits, PAGE_SIZE);
+                                   ^
+File.cc: In member function ‘void File::Open(int, char*)’:
+File.cc:258:46: warning: ignoring return value of ‘ssize_t read(int, void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+   read (myFilDes, &curLength, sizeof (off_t));
+                                              ^
+File.cc: In member function ‘int File::Close()’:
+File.cc:276:46: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+  write (myFilDes, &curLength, sizeof (off_t));
+                                              ^
+g++ -O2 -Wno-deprecated  -g -c DBFile.cc
+yacc -d Parser.y
+sed -i y.tab.c -e "s/  __attribute__ ((__unused__))$/# ifndef __cplusplus\n  __attribute__ ((__unused__));\n# endif/" 
+g++ -c y.tab.c
+y.tab.c: In function ‘int yyparse()’:
+y.tab.c:1425:35: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       yyerror (YY_("syntax error"));
+                                   ^
+y.tab.c:1569:35: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   yyerror (YY_("memory exhausted"));
+                                   ^
+lex  Lexer.l
+gcc  -c lex.yy.c
+g++ -O2 -Wno-deprecated  -g -c test.cc
+In file included from test.cc:3:0:
+test.h:47:18: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char *supplier = "supplier"; 
+                  ^
+test.h:48:18: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char *partsupp = "partsupp"; 
+                  ^
+test.h:49:14: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char *part = "part"; 
+              ^
+test.h:50:16: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char *nation = "nation"; 
+                ^
+test.h:51:18: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char *customer = "customer"; 
+                  ^
+test.h:52:16: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char *orders = "orders"; 
+                ^
+test.h:53:16: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char *region = "region"; 
+                ^
+test.h:54:18: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char *lineitem = "lineitem"; 
+                  ^
+test.cc:6:20: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char *dbfile_dir = ""; // dir where binary heap files should be stored
+                    ^
+test.cc:7:17: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char *tpch_dir ="/cise/tmp/dbi_sp11/DATA/10M/"; // dir where dbgen tpch files (extension *.tbl) can be found
+                 ^
+test.cc:8:22: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char *catalog_path = "catalog"; // full path of the catalog file
+                      ^
+g++ -O2 -Wno-deprecated  -o test.out Record.o Comparison.o ComparisonEngine.o Schema.o File.o DBFile.o y.tab.o lex.yy.o test.o -lfl
